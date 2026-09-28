@@ -12,7 +12,7 @@ A simple, interactive console-based Rock, Paper, Scissors game built with vanill
 - `getComputerChoice()`: Simulates the computer picking a random move.
 - `getHumanChoice()`: Prompts the player and standardizes their choice.
 - `playRound()`: Compares choices and evaluates the round winner using programmatic string indicators (`"human"`, `"computer"`, `"tie"`).
-- `processRoundResult()`: Updates the global leaderboard variables and handles console logs.
+
 
 ## Setup & Execution
 
