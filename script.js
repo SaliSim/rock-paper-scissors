@@ -1,34 +1,24 @@
 
 function getComputerChoice() {
     let computerChoice;
-    const num = Math.random();
+    const choices = ["rock", "paper", "scissors"];
+    const randomIndex = Math.floor(Math.random() * choices.length);
+    return choices[randomIndex];
     
-
-    if (num < 1 / 3) {
-        computerChoice = "Rock";
-    
-    } else if (num < 2 / 3) {
-        computerChoice = "Paper";
-    } else {
-        computerChoice = "Scissors"
-    }
-    return computerChoice;
 }
 
-function getHumanChoice() {
-    let humanChoice = prompt("Please enter your choice between Rock, Paper and Scissors: ");
-
-    return humanChoice;
-}
 let humanScore = 0;
 
 let computerScore = 0;
 
-function playRound(humanChoice, computerChoice) {
+
+function playRound(humanChoice) {
+
+    const computerChoice = getComputerChoice();
     if (
-        humanChoice === "Rock" && computerChoice === "Scissors" ||
-        humanChoice === "Scissors" && computerChoice === "Paper" ||
-        humanChoice === "Paper" && computerChoice === "Rock" 
+        humanChoice === "rock" && computerChoice === "scissors" ||
+        humanChoice === "scissors" && computerChoice === "paper" ||
+        humanChoice === "paper" && computerChoice === "rock" 
     ) {
         humanScore++;
         return `You win ${humanChoice} beats ${computerChoice}`;
@@ -43,17 +33,24 @@ function playRound(humanChoice, computerChoice) {
         return `You Loose ${computerChoice} beats ${humanChoice}`;
     }
 }
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+    const rockButton = document.querySelector("#rock");
+    const paperButton = document.querySelector("#paper");
+    const scissorsButton = document.querySelector("#scissors");
 
-console.log(playRound(humanSelection, computerSelection));
+    const results = document.querySelector("#results");
 
-console.log(`Score -> Human: ${humanScore} | Computer: ${computerScore}`);
+    rockButton.addEventListener("click", () => {
+        results.textContent = playRound("rock");
+    });
 
+    paperButton.addEventListener("click", () => {
+        results.textContent = playRound("paper");
+    });
 
-function playGame(playRound) {
+    scissorsButton.addEventListener("click", () => {
+        results.textContent = playRound("scissors");
+    });
     
-    
-}
+   
+//console.log(`Score -> Human: ${humanScore} | Computer: ${computerScore}`);
 
-console.log(playGame(playRound));
