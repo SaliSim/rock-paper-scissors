@@ -1,0 +1,33 @@
+*{
+    background-color: rgb(24, 117, 197);
+    font-family: sans-serif;
+
+}
+
+
+
+
+#rock{
+    background-color: aliceblue;
+    width: 175px;
+    height: 65px;
+    border: none;
+    border-radius: 9999px;
+
+}
+
+#paper{
+    background-color: aliceblue;
+    width: 175px;
+    height: 65px;
+    border: none;
+    border-radius: 9999px;
+}
+
+#scissors{
+    background-color: aliceblue;
+    width: 175px;
+    height: 65px;
+    border: none;
+    border-radius: 9999px;
+}

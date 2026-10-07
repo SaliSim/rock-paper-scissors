@@ -30,7 +30,7 @@ function playRound(humanChoice) {
 
     else {
         computerScore++;
-        return `You Loose ${computerChoice} beats ${humanChoice}`;
+        return `You Lose ${computerChoice} beats ${humanChoice}`;
     }
 }
     const rockButton = document.querySelector("#rock");
